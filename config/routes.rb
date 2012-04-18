@@ -1,4 +1,9 @@
+require 'api'
 GrapeExample::Application.routes.draw do
+  
+  #可以加载grape api设定加载的url路径
+  mount API::PostApi => "/"
+
   resources :posts
 
   # The priority is based upon order of creation:
